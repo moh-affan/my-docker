@@ -1,0 +1,1 @@
+docker run --env=MYSQL_ROOT_PASSWORD=bismill4h -p 6033:3306 --restart=unless-stopped -d mysql/mysql-server:latest

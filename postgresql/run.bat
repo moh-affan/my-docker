@@ -1,0 +1,1 @@
+docker run --env=POSTGRES_PASSWORD=12345 -p 5432:5432 --restart=unless-stopped -d postgres:13
