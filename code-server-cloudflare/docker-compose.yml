@@ -1,0 +1,22 @@
+name: 'code-cloudflare'
+
+services:
+  code:
+    image: codercom/code-server:latest
+    volumes:
+      - /d/code-server/.config:/home/coder/.config
+      - /d/code-server/projects:/home/coder/project
+    environment:
+      DOCKER_USER: sabitz
+    networks:
+      - internal
+  cloudflare:
+    image: cloudflare/cloudflared:latest
+    command: tunnel --no-autoupdate --url http://code:8080
+    depends_on:
+      - code
+    networks:
+      - internal
+networks:
+  internal:
+    driver: bridge
