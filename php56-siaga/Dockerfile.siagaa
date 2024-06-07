@@ -23,4 +23,4 @@ COPY apache-config.conf /etc/apache2/sites-available/000-default.conf
 WORKDIR /var/www/html
 
 # Copy the contents of the host directory into the container
-COPY . /var/www/html
+#COPY . /var/www/html

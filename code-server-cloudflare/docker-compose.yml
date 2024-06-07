@@ -12,7 +12,7 @@ services:
       - internal
   cloudflare:
     image: cloudflare/cloudflared:latest
-    command: tunnel --no-autoupdate --url http://code:8080
+    command: tunnel --no-autoupdate run --token eyJhIjoiNjU4ZmZjMmI5MmQ5MWNkYTc5NzBlZjk4ZmIxOTczNWUiLCJ0IjoiOTY4OThiMzEtMmNkYi00MzVkLTkyZjUtZTNkY2E0ZmU0ZDI2IiwicyI6Ik5ESTFZV1ZsWkRBdE5HSm1ZUzAwWkdOakxXRTRNVFF0TnpVeU5UbGtZek0yTkRZNSJ9
     depends_on:
       - code
     networks:

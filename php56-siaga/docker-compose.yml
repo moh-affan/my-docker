@@ -1,0 +1,7 @@
+name: 'php56-siaga'
+
+services:
+  php:
+    image: php56-apache
+    volumes:
+      - /home/siaga/www/html:/var/www/html
