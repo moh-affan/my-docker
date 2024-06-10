@@ -1,0 +1,8 @@
+name: "tunneling"
+
+services:
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    network_mode: host
+    container_name: cloud-http-pg
+    command: tunnel --no-autoupdate run --token eyJhIjoiNjU4ZmZjMmI5MmQ5MWNkYTc5NzBlZjk4ZmIxOTczNWUiLCJ0IjoiYzAzNjkwNDUtNjU3NC00YmM0LThlMmItYmE0YzdmYTQxZGVmIiwicyI6Ik1HSmpPR1UwTW1VdE1HRm1NUzAwTjJGaExXSmxPRFV0TURZek4yWmhObVl3T1RGaCJ9
